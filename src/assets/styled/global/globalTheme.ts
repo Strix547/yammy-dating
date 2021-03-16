@@ -11,7 +11,12 @@ const gradients = {
   main: 'linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #F90040'
 } as const
 
+const sizes = {
+  wrapper: 1170
+}
+
 export const globalTheme: DefaultTheme = {
   colors,
-  gradients
+  gradients,
+  sizes
 }
