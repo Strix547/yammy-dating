@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import { FormField } from '../../ui'
-import { Text } from '../../assets/styled/components/Text'
+import { Text, Paper } from '../../assets/styled/components'
+import { LinkBack } from '../../shared/LinkBack/LinkBack.styled'
 
 import facesLeftSrc from './img/faces-left.png'
 import facesRightSrc from './img/faces-right.png'
@@ -9,13 +10,48 @@ import facesRightSrc from './img/faces-right.png'
 export { Text } from '../../assets/styled/components/Text'
 
 export const AuthPage = styled.div`
-  width: ${({ theme }) => theme.sizes.wrapper}px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: ${({ theme }) => theme.sizes.wrapper}px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 15px;
+  box-sizing: border-box;
 `
 
 export const Content = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
+  margin: auto 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 380px;
+    height: 720px;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: -190px;
+    background: url(${facesLeftSrc});
+  }
+
+  &::after {
+    right: -190px;
+    background: url(${facesRightSrc});
+  }
+
+  @media screen and (max-width: 1200px) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 `
 
 export const Right = styled.div`
@@ -51,16 +87,33 @@ export const StoresRow = styled.div`
   margin-top: auto;
 `
 
-export const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: ${`url(${facesLeftSrc}) 0 50% no-repeat, url(${facesRightSrc}) 100% 50% no-repeat`};
-  z-index: -1;
+export const RegisterContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `
 
-export const RegisterContent = styled.div``
+export const Wrapper = styled.div`
+  align-self: center;
+  width: 435px;
+  margin: auto 0;
 
-export const LinkBack = styled.a``
+  ${LinkBack} {
+    margin-bottom: 10px;
+  }
+`
+
+export const PaperStep = styled(Paper)`
+  & > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  ${Text}:first-child {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  & > ${FormField}:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+`

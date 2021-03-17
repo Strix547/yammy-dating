@@ -4,7 +4,8 @@ const colors = {
   main: '#F90040',
   lightGrey: '#ededed',
   grey: '#cccccc',
-  darkGrey: '#808080'
+  darkGrey: '#808080',
+  green: '#2ECC71'
 } as const
 
 const gradients = {

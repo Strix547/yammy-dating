@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import { Link } from '../../../../ui'
 
 export const Footer = styled.footer`
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 1170px;
-  transform: translateX(-50%);
+
+  @media screen and (max-height: 792px) {
+    margin-top: 50px;
+  }
 `
 
 export const Left = styled.div`

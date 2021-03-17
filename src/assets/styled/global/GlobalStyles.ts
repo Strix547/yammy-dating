@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
   
   #root {
     display: flex;
+    overflow-x: hidden;
   }
 
   body {
