@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import { AutocompleteRenderInputParams } from '@material-ui/lab'
 
 import { Button, FormField, Autocomplete } from '../../../../ui'
@@ -17,7 +17,7 @@ interface IRegisterFormProps {
   onRegister(): void
 }
 
-export const RegisterForm: FC<IRegisterFormProps> = ({ onRegister }) => {
+export const RegisterForm = ({ onRegister }: IRegisterFormProps) => {
   const [day, setDay] = useState('')
   const [month, setMonth] = useState('')
   const [year, setYear] = useState('')

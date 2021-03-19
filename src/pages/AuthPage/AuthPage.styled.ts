@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { FormField } from '../../ui'
+import { FormField, Button } from '../../ui'
 import { Text, Paper } from '../../assets/styled/components'
 import { LinkBack } from '../../shared/LinkBack/LinkBack.styled'
 
@@ -108,9 +108,13 @@ export const PaperStep = styled(Paper)`
     margin-bottom: 30px;
   }
 
-  ${Text}:first-child {
+  & > ${Text}:first-child {
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  & > ${Button}:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   & > ${FormField}:not(:last-of-type) {

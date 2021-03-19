@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { PaperStep } from '../../AuthPage.styled'
 
 import { Text } from '../../../../assets/styled/components'
-import { Button, Link } from '../../../../ui'
+import { Link } from '../../../../ui'
 
 export { Text }
 
@@ -13,10 +13,6 @@ export const CodeStep = styled(PaperStep)`
 
   ${Text} {
     line-height: 22px;
-  }
-
-  ${Button} {
-    margin-bottom: 10px;
   }
 
   ${Link} {

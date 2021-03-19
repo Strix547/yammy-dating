@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import * as S from './SocialNetworks.styled'
 
@@ -32,7 +32,7 @@ interface ISocialNetworksProps {
   onNetworkClick: (label: TLabelNetwork) => void
 }
 
-export const SocialNetworks: FC<ISocialNetworksProps> = ({ onNetworkClick }) => {
+export const SocialNetworks = ({ onNetworkClick }: ISocialNetworksProps) => {
   const networks: INetwork[] = [
     { label: 'facebook', icon: <Facebook /> },
     { label: 'google+', icon: <GooglePlus /> },

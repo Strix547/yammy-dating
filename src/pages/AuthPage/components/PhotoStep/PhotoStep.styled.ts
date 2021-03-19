@@ -4,6 +4,7 @@ import { PaperStep } from '../../AuthPage.styled'
 
 import { Text } from '../../../../assets/styled/components'
 import { Link } from '../../../../ui'
+import { SocialNetworks } from '../../../../shared/SocialNetworks/SocialNetworks.styled'
 
 export { Text }
 
@@ -12,6 +13,19 @@ export const PhotoStep = styled(PaperStep)`
   flex-direction: column;
 
   ${Link} {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`
+
+export const SocialRow = styled.div`
+  text-align: center;
+
+  ${Text} {
+    margin-bottom: 10px;
+  }
+
+  ${SocialNetworks} {
+    justify-content: center;
   }
 `
